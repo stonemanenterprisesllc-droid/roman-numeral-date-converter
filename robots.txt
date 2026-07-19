@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://romandate.clickabletools.com/sitemap.xml

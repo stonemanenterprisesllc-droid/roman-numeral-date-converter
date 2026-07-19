@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roman Numeral Date Converter — For Tattoos &amp; Anniversaries</title>
+<meta name="description" content="Convert any date to Roman numerals for tattoos, anniversaries, and jewelry. Pick a date, choose a layout, and copy a clean, correct Roman numeral date. Free, instant.">
+<link rel="canonical" href="https://romandate.clickabletools.com/">
+<style>
+:root{--accent:#1f2937;--accent-dark:#111827}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.6;color:#1f2937;background:#f8fafc}
+header{background:var(--accent);color:#fff;padding:1rem}
+header .wrap{max-width:760px;margin:0 auto}
+header a{color:#fff;text-decoration:none;font-weight:700;font-size:1.2rem}
+main{max-width:760px;margin:0 auto;padding:1rem}
+h1{font-size:1.5rem;margin:.75rem 0 .25rem}
+.tagline{color:#6b7280;margin-bottom:1rem}
+.tool{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:1.25rem;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.row{display:flex;gap:.75rem;flex-wrap:wrap;align-items:flex-end;margin-bottom:.5rem}
+.row>div{display:flex;flex-direction:column}
+label{font-weight:600;margin-bottom:.25rem}
+input[type=date],select{padding:.55rem;border:2px solid #d1d5db;border-radius:8px;font-size:1rem;font-family:inherit}
+#result{margin-top:1rem;background:#f9fafb;border:1px solid #e5e7eb;border-radius:10px;padding:1.25rem;text-align:center}
+#big{font-family:"Times New Roman",Georgia,serif;font-size:2.2rem;letter-spacing:.08em;font-weight:600;word-break:break-word}
+#stacked{font-family:"Times New Roman",Georgia,serif;font-size:1.6rem;letter-spacing:.08em;line-height:1.35;margin-top:.75rem;color:#374151}
+.breakdown{font-size:.85rem;color:#6b7280;margin-top:.6rem}
+.copybtn{background:var(--accent);color:#fff;border:none;border-radius:8px;padding:.5rem 1.1rem;cursor:pointer;font-size:.95rem;font-weight:600;margin-top:.75rem}
+.copybtn:hover{background:var(--accent-dark)}
+.ad-slot{margin:1rem 0}
+article h2{margin:1.5rem 0 .5rem;font-size:1.2rem}
+article p,article li{margin:.5rem 0}
+article ul{padding-left:1.4rem}
+table.ex{border-collapse:collapse;margin:.5rem 0}
+table.ex td{border:1px solid #e5e7eb;padding:.35rem .7rem;font-size:.95rem}
+footer{max-width:760px;margin:2rem auto;padding:1rem;font-size:.85rem;color:#6b7280;border-top:1px solid #e5e7eb}
+footer a{color:#6b7280;margin-right:1rem}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a href="./">Roman Numeral Date Converter</a></div></header>
+<main>
+<h1>Roman Numeral Date Converter</h1>
+<p class="tagline">For tattoos, anniversaries, wedding dates, and jewelry — get a clean, correct Roman numeral date.</p>
+
+<div class="tool">
+<div class="row">
+<div><label for="date">Your date</label><input type="date" id="date"></div>
+<div><label for="order">Order</label>
+<select id="order">
+ <option value="mdy" selected>Month · Day · Year (US)</option>
+ <option value="dmy">Day · Month · Year</option>
+ <option value="ymd">Year · Month · Day</option>
+</select></div>
+<div><label for="sep">Separator</label>
+<select id="sep">
+ <option value=" · " selected>Dots ·</option>
+ <option value=" – ">Dashes –</option>
+ <option value=" / ">Slashes /</option>
+ <option value="  ">Spaces</option>
+ <option value=".">Periods .</option>
+</select></div>
+</div>
+<div id="result" aria-live="polite">
+<div id="big">—</div>
+<div id="stacked"></div>
+<div class="breakdown" id="breakdown"></div>
+<button class="copybtn" id="copybtn">📋 Copy</button>
+</div>
+</div>
+
+<div class="ad-slot" data-ad="top"></div>
+
+<article>
+<h2>How to write a date in Roman numerals</h2>
+<p>A date has three parts — day, month, and year — and each is written as its own Roman numeral,
+separated by a small mark. For example, <strong>March 14, 2025</strong> becomes
+<strong>III · XIV · MMXXV</strong> in month-day-year order. This is the format most people choose
+for a <strong>tattoo, anniversary band, or engraved gift</strong>, because it turns a personal date
+into something that reads like a classic monument inscription.</p>
+<h2>Pick the order that matches your meaning</h2>
+<ul>
+<li><strong>Month · Day · Year</strong> — the common US layout (III · XIV · MMXXV).</li>
+<li><strong>Day · Month · Year</strong> — the layout used across most of the world (XIV · III · MMXXV).</li>
+<li><strong>Year · Month · Day</strong> — a clean, formal look some prefer for jewelry.</li>
+</ul>
+<p>Whichever you pick, keep it consistent — and if it's going on your body forever, double-check the
+order against how you'd naturally read the date out loud.</p>
+<h2>Roman numeral basics</h2>
+<table class="ex">
+<tr><td>I = 1</td><td>V = 5</td><td>X = 10</td><td>L = 50</td></tr>
+<tr><td>C = 100</td><td>D = 500</td><td>M = 1000</td><td>IV = 4, IX = 9</td></tr>
+</table>
+<p>Numbers are built largest-first, and a smaller symbol before a larger one means subtract:
+<em>IV</em> is 4, <em>IX</em> is 9, <em>XL</em> is 40. There is <strong>no zero</strong> in Roman
+numerals, which is why a day like the 4th is <em>IV</em>, never <em>IIII</em>.</p>
+<h2>Common mistakes to avoid</h2>
+<ul>
+<li><strong>IIII instead of IV.</strong> The correct short form for 4 is IV (though clock faces sometimes use IIII stylistically).</li>
+<li><strong>Mixing up day and month.</strong> The 3rd and the 12th look very different in numerals — confirm the order before you commit.</li>
+<li><strong>The year.</strong> 2025 is MMXXV (1000 + 1000 + 10 + 10 + 5). This tool does the arithmetic for you so it's always right.</li>
+</ul>
+<p>Everything is calculated in your browser — your date is never uploaded or stored. Show the copied
+result to your tattoo artist or jeweler as the exact reference.</p>
+</article>
+
+<div class="ad-slot" data-ad="bottom"></div>
+</main>
+
+<footer>
+<p><a href="./">Home</a> <a href="about.html">About</a> <a href="privacy.html">Privacy Policy</a> <a href="terms.html">Terms of Use</a></p>
+<p>&copy; 2026 Roman Numeral Date Converter. All rights reserved.</p>
+<p>More free tools:
+<a href="https://discordtimestamp.clickabletools.com/">Discord Timestamp Generator</a>
+<a href="https://phone.clickabletools.com/">Random Phone Number Generator</a>
+<a href="https://recipescaler.clickabletools.com/">Recipe Scaler</a>
+<a href="https://wordscramble.clickabletools.com/">Word Scramble Maker</a></p>
+</footer>
+
+<script>
+const $=id=>document.getElementById(id);
+function toRoman(num){
+ if(num<=0)return '';
+ const map=[[1000,'M'],[900,'CM'],[500,'D'],[400,'CD'],[100,'C'],[90,'XC'],[50,'L'],[40,'XL'],[10,'X'],[9,'IX'],[5,'V'],[4,'IV'],[1,'I']];
+ let out='';
+ for(const [v,s] of map){while(num>=v){out+=s;num-=v;}}
+ return out;
+}
+const MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];
+function render(){
+ const dv=$('date').value;
+ if(!dv){$('big').textContent='—';$('stacked').textContent='';$('breakdown').textContent='';return;}
+ const [Y,M,D]=dv.split('-').map(Number);
+ const dR=toRoman(D), mR=toRoman(M), yR=toRoman(Y);
+ const order=$('order').value, sep=$('sep').value;
+ let parts;
+ if(order==='dmy')parts=[dR,mR,yR];
+ else if(order==='ymd')parts=[yR,mR,dR];
+ else parts=[mR,dR,yR];
+ const line=parts.join(sep);
+ $('big').textContent=line;
+ $('big').dataset.plain=line;
+ $('stacked').innerHTML='Stacked:<br>'+parts.join('<br>');
+ $('breakdown').textContent=MONTHS[M-1]+' '+D+', '+Y+'  =  '+mR+' (month) · '+dR+' (day) · '+yR+' (year)';
+}
+['date','order','sep'].forEach(id=>$(id).addEventListener('change',render));
+$('copybtn').addEventListener('click',async()=>{
+ const t=$('big').dataset.plain||'';
+ if(!t){return;}
+ try{await navigator.clipboard.writeText(t);}catch(e){}
+ $('copybtn').textContent='copied!';setTimeout(()=>$('copybtn').textContent='📋 Copy',1200);
+});
+// default to today
+(function(){const n=new Date(),pad=x=>String(x).padStart(2,'0');
+ $('date').value=n.getFullYear()+'-'+pad(n.getMonth()+1)+'-'+pad(n.getDate());render();})();
+</script>
+</body>
+</html>
